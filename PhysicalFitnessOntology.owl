@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#"
+     xml:base="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#doesExercise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#doesExercise"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasAdvice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasAdvice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasEffectOfExercise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasEffectOfExercise"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasGoal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHarmfulHealthData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHarmfulHealthData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHealthData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHealthData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasNon-recommendedExercise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasNon-recommendedExercise"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasRecommendedExercise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasRecommendedExercise"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#BalanceExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#BalanceExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasEffectOfExercise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHarmfulHealthData"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthAdvice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthAdvice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#doesExercise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasAdvice"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthAdvice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasGoal"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHealthData"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasNon-recommendedExercise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasRecommendedExercise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#bodyWeights -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#bodyWeights">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#briskWalking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#briskWalking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#coreTraining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#coreTraining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#BalanceExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#dancing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#dancing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hiking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hiking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#improvingCardiopulmonaryFunction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#improvingCardiopulmonaryFunction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toImproveCardiopulmonaryFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#jogging -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#jogging">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#losingWeight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#losingWeight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toLoseWeight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#muscleTraining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#muscleTraining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#resistanceBands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#resistanceBands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#strengtheningMuscles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#strengtheningMuscles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toStrengthenMuscles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#stretching -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#stretching">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#taiChi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#taiChi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#BalanceExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toImproveCardiopulmonaryFunction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toImproveCardiopulmonaryFunction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toLoseWeight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toLoseWeight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toStrengthenMuscles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#toStrengthenMuscles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#yoga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#yoga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#g">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHealthData"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Person"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthData"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHarmfulHealthData"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasNon-recommendedExercise"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Person"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Goal"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#g"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasGoal"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#g"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EffectOfExercise"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasEffectOfExercise"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#e"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasRecommendedExercise"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
