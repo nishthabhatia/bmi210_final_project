@@ -38,15 +38,18 @@ def setup():
 def returnGoalFromNumber(number):
 	number = int(number)
 	if (number == 1):
-		return "toLoseWeight"
+		return "toImproveHeart"
 	elif (number == 2):
-		return "toStrengthenMuscles"
+		return "toGetStronger"
 	elif (number == 3):
-		return "toImproveCardiopulmonaryFuntion"
-	else:
-		#TO DO error correction
-		return ""
-
+		return "toImproveFlexibility"
+	elif (number == 4):
+		return "toBuildEndurance"
+	elif (number == 5):
+		return "toLoseWeight"
+	elif (number == 6):
+		return "toStrengthenMuscles"
+	else: return ""
 
 #return a list of health data information, based on user input
 def returnHealthDataFromNums(nums):
@@ -54,11 +57,19 @@ def returnHealthDataFromNums(nums):
 	for num in nums:
 		num = int(num)
 		if (num == 1):
-			health_data.append("heartDisease")
+			health_data.append("pregnant")
 		elif (num == 2):
+			health_data.append("soreMuscles")
+		elif (num == 3):
 			health_data.append("asthma")
-		elif (nume == 3):
+		elif (num == 4):
 			health_data.append("backPain")
+		elif (num == 5):
+			health_data.append("overFifty")
+		elif (num == 6):
+			health_data.append("injuredLimbs")
+		elif(num == 7):
+			health_data.append('heartDisease')
 	return health_data
 
 
@@ -82,7 +93,7 @@ def findNonRecommendedExercises(ontology, health_data):
 	for ex in exercisesOfInterest:
 		if len(set(ex.hasHarmfulHealthData).intersection(set(health_data))) > 0:
 			nonRecExercises.append(ex.name)
-	#print(nonRecExercises)
+	print(nonRecExercises)
 	return nonRecExercises
 
 def findRecommendedExercises(ontology, goal, nr_ex):
@@ -96,12 +107,15 @@ def findRecommendedExercises(ontology, goal, nr_ex):
 		if sameIndividuals[0] == goal[0]:
 			if ex.name not in nr_ex:
 				recExercises.append(ex.name)
-	#print(recExercises)
+	print(recExercises)
 	return recExercises
 
 def start_convo(ontology):	
 	convo_running = True
 	
+	for thing in ontology.individuals():
+		print (thing)
+
 	while (convo_running):
 
 		#1. Create a new Person instance
@@ -113,9 +127,12 @@ def start_convo(ontology):
 			#you can create a new goal. 
 			#and then it must be set equivalent to an existing effect of exercise.
 		goal_num = input("Awesome! Hi " + name + """! Which of the following goals do you align with most?
-1: Lose Weight
-2: Strengthen Muscles
-3: Improve Cardiopulmonary Function \n
+1: Improve Heart
+2: Get Stronger
+3: Improve Flexibility
+4: Build Endurance
+5: Lose Weight
+6: Strengthen Muscles \n
 Please type the number corresponding to your selected goal: \n""")
 		print("\n")
 		goal = returnGoalFromNumber(goal_num)
@@ -127,9 +144,13 @@ Please type the number corresponding to your selected goal: \n""")
 
 		#4. Ask for health data. This is important for linking to exercise health data.
 		health_data_nums = input("""Great! Just a few more questions. Do any of the following health conditions apply to you?
-1: Heart Disease
-2: Asthma
-3: Back Pain \n
+1: Pregnant
+2: Sore Muscles
+3: Asthma
+4: Back Pain
+5: Over 50 Years Old
+6: Injured Limbs
+7: Heart Disease \n
 Please type a list of numbers corresponding to conditions that apply to you, separated by a single space. If none apply, please type 0: \n""")
 		health_data_nums = health_data_nums.split()
 		health_data_list = returnHealthDataFromNums(health_data_nums)
@@ -149,14 +170,17 @@ Please type a list of numbers corresponding to conditions that apply to you, sep
 
 		print ('\n')
 
-		print ("Thank you! These are the exercises that we recommend for you: \n")
+		if (len(r_exercises>0)):
+			print ("Thank you! These are the exercises that we recommend for you:")
+		else: print("Currently, we do not have any recommended exercises for you!")
 		for ex in r_exercises:
 			print (ex)
-		print ("...and these are the exercises that we don't recommend for you: ")
-		for ex in nr_exercises:
-			ex = ''.join(' ' + char if char.isupper() else char.strip() for char in ex).strip()
-			print (ex.lower())
-		
+		if (len(nr_exercises)>0):
+			print ("...and these are the exercises that we don't recommend for you:")
+			for ex in nr_exercises:
+				ex = ''.join(' ' + char if char.isupper() else char.strip() for char in ex).strip()
+				print (ex.lower())
+		else: print ("Currently, we do not have any non-recommended exercises for you!")
 		print('\n')
 		print('Thanks for using the Fitness Advisor! Good luck with your health journey. \n')
 
