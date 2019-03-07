@@ -113,8 +113,8 @@ def findRecommendedExercises(ontology, goal, nr_ex):
 def start_convo(ontology):	
 	convo_running = True
 	
-	for thing in ontology.individuals():
-		print (thing)
+	# for thing in ontology.individuals():
+	# 	print (thing)
 
 	while (convo_running):
 
