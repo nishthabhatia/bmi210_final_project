@@ -93,7 +93,7 @@ def findNonRecommendedExercises(ontology, health_data):
 	for ex in exercisesOfInterest:
 		if len(set(ex.hasHarmfulHealthData).intersection(set(health_data))) > 0:
 			nonRecExercises.append(ex.name)
-	print(nonRecExercises)
+	#print(nonRecExercises)
 	return nonRecExercises
 
 def findRecommendedExercises(ontology, goal, nr_ex):
@@ -107,7 +107,7 @@ def findRecommendedExercises(ontology, goal, nr_ex):
 		if sameIndividuals[0] == goal[0]:
 			if ex.name not in nr_ex:
 				recExercises.append(ex.name)
-	print(recExercises)
+	#print(recExercises)
 	return recExercises
 
 def start_convo(ontology):	
@@ -170,7 +170,7 @@ Please type a list of numbers corresponding to conditions that apply to you, sep
 
 		print ('\n')
 
-		if (len(r_exercises>0)):
+		if (len(r_exercises)>0):
 			print ("Thank you! These are the exercises that we recommend for you:")
 		else: print("Currently, we do not have any recommended exercises for you!")
 		for ex in r_exercises:
