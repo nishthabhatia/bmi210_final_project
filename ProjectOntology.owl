@@ -121,6 +121,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasEffectOfExercise"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#improvingFlexibility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -190,6 +196,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#hasHarmfulHealthData"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#soreMuscles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -221,12 +233,31 @@
     
 
 
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#barre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#barre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#basketball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#basketball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#heartDisease"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#bodyWeights -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#bodyWeights">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise"/>
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#gettingStronger"/>
         <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#overFifty"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
     </owl:NamedIndividual>
     
 
@@ -261,6 +292,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#cycling">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
     </owl:NamedIndividual>
     
 
@@ -271,6 +303,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#buildingEndurance"/>
         <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#injuredLimbs"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
     </owl:NamedIndividual>
     
 
@@ -335,6 +368,7 @@
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#losingWeight"/>
         <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#injuredLimbs"/>
         <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#overFifty"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
     </owl:NamedIndividual>
     
 
@@ -343,6 +377,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#jumpRope">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
     </owl:NamedIndividual>
     
 
@@ -363,6 +398,9 @@
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#gettingStronger"/>
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#strengtheningMuscles"/>
         <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#heartDisease"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#injuredLimbs"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#soreMuscles"/>
     </owl:NamedIndividual>
     
 
@@ -371,6 +409,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#overFifty">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#HealthData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pilates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pilates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
     </owl:NamedIndividual>
     
 
@@ -389,6 +435,15 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#StrengthExercise"/>
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#gettingStronger"/>
         <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#injuredLimbs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#soccer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#soccer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#pregnant"/>
     </owl:NamedIndividual>
     
 
@@ -415,6 +470,16 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#stretching">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#improvingFlexibility"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#backPain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#swimming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#swimming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#injuredLimbs"/>
     </owl:NamedIndividual>
     
 
@@ -423,6 +488,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#taiChi">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#Exercise"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#tennis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#tennis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#EnduranceExercise"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#heartDisease"/>
     </owl:NamedIndividual>
     
 
@@ -480,6 +555,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#yoga">
         <rdf:type rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#FlexibilityExercise"/>
         <hasEffectOfExercise rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#improvingFlexibility"/>
+        <hasHarmfulHealthData rdf:resource="http://www.semanticweb.org/nishtha/ontologies/2019/1/untitled-ontology-19#backPain"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
